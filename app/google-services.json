@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "454836638413",
+    "project_id": "chrono-c39c3",
+    "storage_bucket": "chrono-c39c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454836638413:android:986864515241ee667bcf84",
+        "android_client_info": {
+          "package_name": "com.jesd_opsc_poe.chrono"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJBebheNa7ieRQmxeHEdEM2tgbQN0xkT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

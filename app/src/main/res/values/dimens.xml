@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="initial_height">205dp</dimen>
+    <dimen name="expanded_height">510dp</dimen>
+</resources>

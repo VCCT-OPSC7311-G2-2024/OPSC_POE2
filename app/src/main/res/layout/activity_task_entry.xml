@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="20dp"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tvNewTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_task"
+            android:textSize="33sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lytSelectClient"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="20dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="30dp"
+            android:hint="@string/select_client"
+            android:textColorHint="@color/font_grey"
+            app:boxStrokeWidth="2dp"
+            app:counterMaxLength="20"
+            app:endIconTint="@color/font_grey"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/font_grey"
+            app:layout_constraintEnd_toStartOf="@+id/ibtnAddClient"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvNewTask"
+            app:startIconDrawable="@drawable/baseline_person_24"
+            app:startIconTint="@color/font_grey">
+
+            <AutoCompleteTextView
+                android:id="@+id/txtSelectClient"
+                android:labelFor="@id/txtSelectClient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/font_grey"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/ibtnAddClient"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/add_client"
+            android:src="@drawable/baseline_add_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lytSelectClient"
+            app:layout_constraintTop_toBottomOf="@+id/tvNewTask" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lytSelectCategory"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="30dp"
+            app:boxCornerRadiusBottomEnd="10dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="10dp"
+            app:boxCornerRadiusTopStart="30dp"
+            android:hint="@string/select_category"
+            android:textColorHint="@color/font_grey"
+            app:boxStrokeWidth="2dp"
+            app:counterMaxLength="20"
+            app:endIconTint="@color/font_grey"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/font_grey"
+            app:layout_constraintEnd_toStartOf="@+id/ibtnAddCategory"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ibtnAddClient"
+            app:startIconDrawable="@drawable/baseline_category_24"
+            app:startIconTint="@color/font_grey">
+
+            <AutoCompleteTextView
+                android:id="@+id/txtSelectCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/font_grey"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/ibtnAddCategory"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/add_category"
+            android:src="@drawable/baseline_add_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/lytSelectCategory"
+            app:layout_constraintTop_toBottomOf="@+id/ibtnAddClient" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/lytDescription"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:layout_marginTop="30dp"
+            app:boxCornerRadiusBottomEnd="30dp"
+            app:boxCornerRadiusBottomStart="30dp"
+            app:boxCornerRadiusTopEnd="30dp"
+            app:boxCornerRadiusTopStart="30dp"
+            android:hint="@string/description"
+            android:textColorHint="@color/font_grey"
+            app:boxStrokeWidth="2dp"
+            app:counterEnabled="true"
+            app:counterMaxLength="30"
+            app:counterTextColor="@color/font_grey"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/font_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ibtnAddCategory"
+            app:startIconDrawable="@drawable/baseline_edit_24"
+            app:startIconTint="@color/font_grey">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/font_grey"
+                android:textSize="20sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSelectDate"
+            android:layout_width="330dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/material_button"
+            android:drawableStart="@drawable/baseline_calendar_month_24"
+            android:drawablePadding="15dp"
+            android:drawableTint="@color/font_grey"
+            android:padding="10dp"
+            android:text="@string/select_date"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lytDescription" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnStartTime"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/material_button"
+            android:drawableStart="@drawable/baseline_access_time_filled_24"
+            android:drawablePadding="15dp"
+            android:drawableTint="@color/font_grey"
+            android:padding="10dp"
+            android:text="@string/start_time"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/btnEndTime"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/btnSelectDate"
+            app:layout_constraintTop_toBottomOf="@+id/btnSelectDate" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnCreateTask"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/active_button"
+            android:fontFamily="@font/sourcesanspro_bold"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="@string/create"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnClearImage"
+            app:layout_constraintStart_toStartOf="@+id/imgTaskImage"
+            app:layout_constraintTop_toBottomOf="@+id/imgTaskImage" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnClearImage"
+            android:layout_width="70dp"
+            android:layout_height="100dp"
+            android:background="@drawable/material_button_cut"
+            android:contentDescription="@string/clear_image"
+            android:drawableStart="@drawable/baseline_delete_forever_24"
+            android:drawableTint="@color/font_grey"
+            android:padding="18dp"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imgTaskImage"
+            app:layout_constraintStart_toEndOf="@+id/imgTaskImage"
+            app:layout_constraintTop_toTopOf="@+id/imgTaskImage" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnEndTime"
+            android:layout_width="160dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/material_button"
+            android:drawableStart="@drawable/baseline_access_time_filled_rotated_24"
+            android:drawablePadding="15dp"
+            android:drawableTint="@color/font_grey"
+            android:padding="10dp"
+            android:text="@string/end_time"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnSelectDate"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/btnStartTime"
+            app:layout_constraintTop_toBottomOf="@+id/btnSelectDate" />
+
+        <ImageView
+            android:id="@+id/imgTaskImage"
+            android:contentDescription="@string/task_image"
+            android:layout_width="260dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/img_not_attached_bg"
+            android:padding="5dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/attach_image"
+            app:layout_constraintStart_toStartOf="@+id/btnStartTime"
+            app:layout_constraintTop_toBottomOf="@+id/btnStartTime" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

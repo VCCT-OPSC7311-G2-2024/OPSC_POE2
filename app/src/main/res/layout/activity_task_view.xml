@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498">
+
+        <ImageView
+            android:id="@+id/imgTask"
+            android:layout_width="match_parent"
+            android:layout_height="205dp"
+            android:background="@color/darker_grey"
+            android:contentDescription="@string/task_image"
+            android:scaleType="fitCenter"
+            android:src="@drawable/placeholder"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/date_placeholder"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgTask" />
+
+        <TextView
+            android:id="@+id/tvImageHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sourcesanspro_regular"
+            android:layout_marginStart="10dp"
+            android:paddingHorizontal="2dp"
+            android:text="@string/image_hint"
+            android:textStyle="italic"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="@+id/imgTask"
+            app:layout_constraintTop_toBottomOf="@+id/imgTask" />
+
+        <LinearLayout
+            android:id="@+id/lytTaskDetails"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTimes">
+
+            <TextView
+                android:id="@+id/tvDescriptionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="25dp"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:text="@string/description"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/baseline_edit_24"
+                app:drawableTint="@color/font_grey" />
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="55dp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="@string/research_and_planning"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/tvClientTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="25dp"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:text="@string/client"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/baseline_person_24"
+                app:drawableTint="@color/font_grey" />
+
+            <TextView
+                android:id="@+id/tvClient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="55dp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="@string/xyz_management"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/tvCategoryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="25dp"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/sourcesanspro_bold"
+                android:text="@string/category"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/baseline_category_24"
+                app:drawableTint="@color/font_grey" />
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="55dp"
+                android:fontFamily="@font/sourcesanspro_regular"
+                android:text="@string/manage_pro_system"
+                android:textSize="19sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvTimes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/times_placeholder"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDate" />
+
+        <TextView
+            android:id="@+id/tvDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/task_duration_bg"
+            android:fontFamily="@font/spacemono_bold"
+            android:paddingHorizontal="10dp"
+            android:text="@string/duration_placeholder"
+            android:textColor="@color/white"
+            android:textSize="45sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lytTaskDetails" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
